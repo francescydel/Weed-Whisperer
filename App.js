@@ -1,7 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View, Button, Alert } from 'react-native';
+import React, { useState } from 'react';
+import { Image, StyleSheet, Text, View, Button, Alert,TextInput,TouchableOpacity } from 'react-native';
+//import ExampleBackEndCall from './Screens/ExampleBackendCall';
+
 
 export default function App() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <View style={styles.container}>
       <Image source={require("./assets/home-background.png")}></Image>
@@ -11,6 +17,7 @@ export default function App() {
         color="#841584"
         accessibilityLabel="Learn more about this purple button"
       />
+     
       <Text>This is the weed whisperer app!</Text>
       <StatusBar style="auto" />
     </View>
@@ -35,4 +42,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  image :{
+    marginBottom: 40
+  }
 });
